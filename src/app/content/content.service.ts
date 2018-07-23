@@ -23,7 +23,7 @@ export class ContentService {
           {
             type: 'title-content',
             title: 'Título 2',
-            text: 'Lorem Ipsum 2'
+            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque error laborum autem dolore quas, hic neque facilis explicabo! Facere iure porro veniam fugiat, ex delectus dolorem magnam accusamus voluptates maxime!Totam corrupti ipsam hic id fugit libero dignissimos aliquam dolore alias maiores nobis blanditiis voluptatem obcaecati neque sunt, dolorem itaque, non vitae! Tenetur, atque unde? Ea dolore vitae odio tempora.'
           }
         ]
       },
@@ -37,7 +37,7 @@ export class ContentService {
           {
             type: 'title-image',
             title: 'Título 4',
-            img: 'assets/cover_image.png',
+            img: 'assets/excited-baby.gif',
           }
         ]
       },
