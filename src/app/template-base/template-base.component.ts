@@ -49,7 +49,6 @@ export class TemplateBaseComponent implements OnInit {
     } else {
       this.slide = this.presentation.content[this.chapter].slides[this.slideByChapter];
       this.type = this.presentation.content[this.chapter].slides[this.slideByChapter].type;
-      console.log(this.type)
     }
   }
 }

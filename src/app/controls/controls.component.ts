@@ -23,6 +23,8 @@ export class ControlsComponent implements OnInit {
     private _templateBase:TemplateBaseComponent) {
       this._activatedRoute.params.subscribe( params => {
         this.viewer = params.viewer;
+        this.chapter = params.chapter;
+        this.slideByChapter = params.slide;
       })
     }
   
@@ -50,22 +52,20 @@ export class ControlsComponent implements OnInit {
   }
 
   sumChapters(progress:number) {
-    let nextChapter = this._content.CurrentSlide[0] + progress;
-    if(nextChapter < this._content.getPresentation().content.length && nextChapter >= 0){
-      this._content.CurrentSlide = [nextChapter, this._content.CurrentSlide[1]];
-      this._router.navigate([this._content.CurrentSlide[0], this._content.CurrentSlide[1], this.viewer]);
-      this._templateBase.updateSlideNumber(this._content.CurrentSlide[0], this._content.CurrentSlide[1]);
+    let nextChapter = parseInt(this.chapter.toString()) + progress;
+    if(nextChapter < this._content.getPresentation().content.length && nextChapter >= 0) {
+      this.chapter = nextChapter;
+      this._router.navigate([this.chapter, this._content.CurrentSlides[this.chapter], this.viewer]);
+      this._templateBase.updateSlideNumber(this.chapter, this._content.CurrentSlides[this.chapter]);
     }
   }
 
   sumSlides(progress:number) {
-    let nextSlide = this._content.CurrentSlide[1] + progress;
-    //let nextSlideByChapter = this._content.CurrentSlides[]
-    if(nextSlide < this._content.getPresentation().content[this._content.CurrentSlide[0]].slides.length && nextSlide >= 0){
-      this._content.CurrentSlide = [this._content.CurrentSlide[0], nextSlide];
-      console.log(this._content.getPresentation().content[this._content.CurrentSlide[0]].slides[nextSlide].title);
-      this._router.navigate([this._content.CurrentSlide[0], this._content.CurrentSlide[1], this.viewer]);
-      this._templateBase.updateSlideNumber(this._content.CurrentSlide[0], this._content.CurrentSlide[1]);
+    let nextSlideByChapter = this._content.CurrentSlides[this.chapter] + progress;
+    if(nextSlideByChapter < this._content.getPresentation().content[this._content.CurrentSlides[0]].slides.length && nextSlideByChapter >= 0) {
+      this._content.CurrentSlides[this.chapter] = nextSlideByChapter;
+      this._router.navigate([this.chapter, nextSlideByChapter, this.viewer]);
+      this._templateBase.updateSlideNumber(this.chapter, nextSlideByChapter);
     }
   }
 

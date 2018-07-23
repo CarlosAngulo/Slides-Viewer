@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ContentService {
 
-  private currentSlide = [0, 0]
   private currentSlides = [];
 
   private presentation:Presentation = {
@@ -51,20 +50,13 @@ export class ContentService {
 
   constructor() {
     for (let i = 0; i<this.presentation.content.length; i++) {
-      this.currentSlides[i] = [0, 0];
+      this.currentSlides[i] = 0;
     }
+    console.log(this.currentSlides)
   }
 
   getPresentation(): Presentation {
     return this.presentation;
-  }
-
-  get CurrentSlide() {
-    return this.currentSlide;
-  }
-
-  set CurrentSlide(currentSlide) {
-    this.currentSlide = currentSlide;
   }
 
   get CurrentSlides() {
