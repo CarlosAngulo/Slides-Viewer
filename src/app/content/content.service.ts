@@ -17,13 +17,12 @@ export class ContentService {
           {
             type: 'cover',
             title: 'Título',
-            img: 'imagen01.jpg',
+            img: 'assets/cover_image.png',
             text: 'Lorem Ipsum'
           },
           {
             type: 'title-content',
             title: 'Título 2',
-            img: 'imagen02.jpg',
             text: 'Lorem Ipsum 2'
           }
         ]
@@ -34,14 +33,11 @@ export class ContentService {
           {
             type: 'title',
             title: 'Título 3',
-            img: 'imagen01.jpg',
-            text: 'Lorem Ipsum'
           },
           {
             type: 'title-image',
             title: 'Título 4',
-            img: 'imagen02.jpg',
-            text: 'Lorem Ipsum 2'
+            img: 'assets/cover_image.png',
           }
         ]
       },
