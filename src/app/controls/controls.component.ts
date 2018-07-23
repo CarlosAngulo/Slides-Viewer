@@ -7,7 +7,7 @@ import { TemplateBaseComponent } from '../template-base/template-base.component'
 @Component({
   selector: 'app-controls',
   templateUrl: './controls.component.html',
-  styleUrls: ['./controls.component.css']
+  styleUrls: ['./controls.component.scss']
 })
 
 

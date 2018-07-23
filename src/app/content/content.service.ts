@@ -89,7 +89,7 @@ export interface Presentation {
 
 export interface Slide {
   type: string;
-  title: string;
-  img: string;
-  text: string;
+  title?: string;
+  img?: string;
+  text?: string;
 }
