@@ -5,7 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-template-base',
   templateUrl: './template-base.component.html',
-  styleUrls: ['./template-base.component.css']
+  styleUrls: ['./template-base.component.scss']
 })
 export class TemplateBaseComponent implements OnInit {
 

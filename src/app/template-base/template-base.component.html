@@ -1,8 +1,6 @@
-<div>{{slide.title}}</div>
-
 <app-controls></app-controls>
 
-<app-cover *ngIf="type == 'cover'"></app-cover>
-<app-title *ngIf="type == 'title'"></app-title>
-<app-title-content *ngIf="type == 'title-content'"></app-title-content>
-<app-title-image *ngIf="type == 'title-image'"></app-title-image>
+<app-cover *ngIf="type == 'cover'" [slide]="slide"></app-cover>
+<app-title *ngIf="type == 'title'" [slide]="slide"></app-title>
+<app-title-content *ngIf="type == 'title-content'" [slide]="slide"></app-title-content>
+<app-title-image *ngIf="type == 'title-image'" [slide]="slide"></app-title-image>
