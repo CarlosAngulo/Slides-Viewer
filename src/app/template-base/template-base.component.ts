@@ -14,6 +14,7 @@ export class TemplateBaseComponent implements OnInit {
   slideByChapter: number = 0;
   viewer: string;
   slide: Slide;
+  type: string;
 
   constructor( 
     private _contentService: ContentService, 
@@ -46,8 +47,9 @@ export class TemplateBaseComponent implements OnInit {
       this.slideByChapter >= this.presentation.content[this.chapter].slides.length){
         this._router.navigate(['']);
     } else {
-      this.slide = this.presentation.content[this.chapter].slides[this.slideByChapter]
-      console.log(this.slide.text)
+      this.slide = this.presentation.content[this.chapter].slides[this.slideByChapter];
+      this.type = this.presentation.content[this.chapter].slides[this.slideByChapter].type;
+      console.log(this.type)
     }
   }
 }

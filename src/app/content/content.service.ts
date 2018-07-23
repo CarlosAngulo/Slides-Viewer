@@ -34,13 +34,13 @@ export class ContentService {
         slides: [
           {
             type: 'title',
-            title: 'Título',
+            title: 'Título 3',
             img: 'imagen01.jpg',
             text: 'Lorem Ipsum'
           },
           {
             type: 'title-image',
-            title: 'Título 2',
+            title: 'Título 4',
             img: 'imagen02.jpg',
             text: 'Lorem Ipsum 2'
           }
