@@ -1,0 +1,14 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #211056;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background: url(https://s3.amazonaws.com/media-p.slid.es/uploads/741672/images/5128138/base-02.jpg) no-repeat scroll center center transparent;
+    background-size: cover;
+}
